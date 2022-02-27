@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: '*'
+            allowedMethods: '*'
+            allowedHeaders: '*'
+      routes:
+        - id: ServiceA
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/servicea/**
+          filters:
+            - StripPrefix=2
