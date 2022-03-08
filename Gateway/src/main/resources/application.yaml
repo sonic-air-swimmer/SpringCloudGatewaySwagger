@@ -15,5 +15,3 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/api/servicea/**
-          filters:
-            - StripPrefix=2

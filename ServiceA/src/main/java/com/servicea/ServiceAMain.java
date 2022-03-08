@@ -12,9 +12,7 @@ import java.util.Collections;
 public class ServiceAMain {
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(ServiceAMain.class);
-        app.setDefaultProperties(Collections.singletonMap("server.port", "8081"));
-        app.run(args);
+        SpringApplication.run(ServiceAMain.class, args);
     }
 
     @Bean
