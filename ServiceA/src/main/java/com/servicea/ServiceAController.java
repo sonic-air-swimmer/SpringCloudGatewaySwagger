@@ -10,9 +10,9 @@ import java.util.Map;
 public class ServiceAController {
 
     @GetMapping("test")
-    public String testServiceA(@RequestHeader Map<String,String> headers) {
+    public String testServiceA(@RequestHeader Map<String, String> headers) {
         System.out.println(headers);
 
-        return "Testing ServiceA";
+        return "Request HTTP Headers:" + headers;
     }
 }
